@@ -1,0 +1,28 @@
+<html>
+    <head>
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/stili.css">
+    </head>
+    <body>
+	    <div class="navbar"><span>Real time calculation for electric car power output and range. (Assumption 75kwh battery pack)</span></div>
+	    <div class="wrapper">
+	        <div id="chart"></div>
+	    </div>
+	    <div class="wrapper">
+	        <div id="chart1"></div>
+	    </div>
+	    <div>
+	    	<p><label class="sliderLabels">Frontal Area: 				    </label> <input onmousemove="update('Af')" class="inputbox" id="Af" value="50" type="range" name="" min="0" max="100"> <input class="sliderNumbers" id="AfV" value="2.000"></input></p>
+	    	<p><label class="sliderLabels">Drag Coefficient:				</label> <input onmousemove="update('Cx')" class="inputbox" id="Cx" value="50" type="range" name="" min="0" max="100"> <input class="sliderNumbers" id="CxV" value="0.300"></input></p>
+	    	<p><label class="sliderLabels">Air density:					 	</label> <input onmousemove="update('Da')" class="inputbox" id="Da" value="50" type="range" name="" min="0" max="100"> <input class="sliderNumbers" id="DaV" value="1.225"></input></p>
+	    	<p><label class="sliderLabels">Weight:							</label> <input onmousemove="update('Ma')" class="inputbox" id="Ma" value="50" type="range" name="" min="0" max="100"> <input class="sliderNumbers" id="MaV" value="1800 "></input></p>
+	    	<p><label class="sliderLabels">Rolling Resistance Coefficient: 	</label> <input onmousemove="update('RR')" class="inputbox" id="RR" value="50" type="range" name="" min="0" max="100"> <input class="sliderNumbers" id="RRV" value="0.012"></input></p>
+	    	<p><label class="sliderLabels">Gravitational acceleration: 		</label> <input onmousemove="update('Ag')" class="inputbox" id="Ag" value="50" type="range" name="" min="0" max="100"> <input class="sliderNumbers" id="AgV" value="9.810"></input></p>
+	    </div>
+	    <p><label class="h1" onclick="makeChart(130)">Make the power requirement chart (Speed vs Power required for aero and wheel drag)</label></p>
+	    <p><label class="h1" onclick="makeChart1(130)">Make the range estimates at a given speed</label></p>
+    
+	    <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
